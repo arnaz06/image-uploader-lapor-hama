@@ -1,13 +1,12 @@
 require('dotenv').config()
 module.exports =
 {
-  "secret" : process.env.SECRET_KEY,
   "development": {
-    "username": process.env.PG_USERNAME || '',
-    "password": process.env.PG_PASSWORD || '',
-    "database": process.env.PG_DATABASE || 'imageuploader',
-    "host": process.env.PG_HOSTNAME || '',
-    "dialect": "postgres",
+    "username": process.env.MYSQL_USERNAME || '',
+    "password": process.env.MYSQL_PASSWORD || '',
+    "database": process.env.MYSQL_DATABASE || 'imageuploader',
+    "host": process.env.MYSQL_HOSTNAME || '',
+    "dialect": "mysql",
     "logging": false,
     "pool": {
       "max": 5,
